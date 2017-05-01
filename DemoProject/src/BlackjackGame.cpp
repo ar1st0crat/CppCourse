@@ -1,20 +1,18 @@
 #include "BlackjackGame.h"
 #include "BlackjackScoreCounter.h"
 
-
-/** Constructor
-* <p>The score counter is injected in BlackjackGame constructor</p> */
+/** Default constructor
+* <p>By default an instance of BlackjackScoreCounter is created in BlackjackGame constructor</p> */
 BlackjackGame::BlackjackGame()
-    : score_counter_(BlackjackScoreCounter())
 {
+    score_counter_ = std::make_unique<BlackjackScoreCounter>();
 }
 
-/** Destructor
-* <p>In order to implement the composition pattern for the dealer we delete dealer object here</p> */
-BlackjackGame::~BlackjackGame()
+/** Parameterized constructor
+* <p>The score counter is injected in BlackjackGame constructor</p> */
+BlackjackGame::BlackjackGame(std::unique_ptr<IScoreCounter> score_counter)
 {
-    delete player_;
-    delete dealer_;
+    score_counter_ = std::move(score_counter);
 }
 
 /**
@@ -37,8 +35,8 @@ bool BlackjackGame::setup()
     }
 
     // we're ready to go, so create player and dealer
-    player_ = new Player(player_name, money);
-    dealer_ = new CardHolder("Dealer");
+    player_ = std::make_shared<Player>(player_name, money);
+    dealer_ = std::make_unique<CardHolder>("Dealer");
 
     return true;
 }
@@ -47,13 +45,13 @@ bool BlackjackGame::setup()
 */
 void BlackjackGame::run()
 {
-    // first things first! ))
+    // first things first!
     if (!setup())
     {
         return;
     }
-
-    // keep asking player to play until he/she has enough money and he wishes to continue
+    // keep asking player to play until he/she has enough money
+    // and he/she wishes to continue
     char choice = 'y';
     while (choice == 'y')
     {
@@ -104,17 +102,17 @@ void BlackjackGame::showTable() const
 /** Method checks if a cardholder's got the BlackJack
 * @param [in] CardHolder* card_holder    The pointer to a cardholder
 * @returns bool true if a cardholder's got the BlackJack; false - otherwise */
-bool BlackjackGame::checkBlackjack(CardHolder* card_holder) const
+bool BlackjackGame::checkBlackjack(const CardHolder* card_holder) const
 {
-    return card_holder->countScore(score_counter_) == 21;
+    return card_holder->countScore(score_counter_.get()) == 21;
 }
 
 /** Method checks if a cardholder's got the BlackJack with "777" combination
 * @param [in] CardHolder* cardHolder    The pointer to a cardholder
 * @returns bool true if a cardholder's got the "777" combination; false - otherwise */
-bool BlackjackGame::check777(CardHolder* card_holder) const
+bool BlackjackGame::check777(const CardHolder* card_holder) const
 {
-    if (card_holder->countScore(score_counter_) == 21)
+    if (card_holder->countScore(score_counter_.get()) == 21)
     {
         auto hand = card_holder->getHand();
 
@@ -140,13 +138,13 @@ bool BlackjackGame::check777(CardHolder* card_holder) const
 void BlackjackGame::setBonuses()
 {
     // consider separately the cases with Blackjack (there are another rules for winning money calculation in those cases)
-    if (checkBlackjack(player_))
+    if (checkBlackjack(player_.get()))
     {
         // if the player's got Blackjack while dealer hasn't, then we should also check how many cards do they have:
-        if (!checkBlackjack(dealer_))
+        if (!checkBlackjack(dealer_.get()))
         {   
             // and another one situation: if the player has the "777" combination, the player will take one more 1-to-1 bonus
-            if (check777(player_))
+            if (check777(player_.get()))
             {
                 std::cout << "777!" << std::endl;
                 player_->bonusStake(2);
@@ -191,21 +189,23 @@ void BlackjackGame::gameResults()
     setBonuses();           
         
     // if the dealer's got Blackjack then we simply print this information
-    if (checkBlackjack(dealer_))             
+    if (checkBlackjack(dealer_.get()))
     {
         std::cout << dealer_->getName() << " Blackjack!" << std::endl;
     }
-                                                        
+
     // next, we compare total scores of the dealer and the player
-    if (player_->countScore(score_counter_) < dealer_->countScore(score_counter_))
+    auto score_counter = score_counter_.get();
+
+    if (player_->countScore(score_counter) < dealer_->countScore(score_counter))
     {
         dealerWins();
     }
-    else if (player_->countScore(score_counter_) == dealer_->countScore(score_counter_))
+    else if (player_->countScore(score_counter) == dealer_->countScore(score_counter))
     {
         std::cout << std::endl << "Tie!" << std::endl;
     }
-    else if (player_->countScore(score_counter_) > dealer_->countScore(score_counter_))
+    else if (player_->countScore(score_counter) > dealer_->countScore(score_counter))
     {
         playerWins();
     }
@@ -217,19 +217,18 @@ void BlackjackGame::dealerActions()
     unsigned char choice = '0';
 
     // here's one of the most difficult part: we check right away if the player's got Blackjack with 2 cards
-    if (checkBlackjack(player_))
+    if (checkBlackjack(player_.get()))
     {
         std::cout << player_->getName() << " Blackjack!" << std::endl;
 
         // we should also check that the dealer's first card is 10, J, Q, K or A
         // (but this is necessary only for the case if the player has only 2 cards)
-
         if (player_->getHand().size() == 2)
         {
-            if (dealer_->countScore(score_counter_) >= 10)
+            if (dealer_->countScore(score_counter_.get()) >= 10)
             {
                 // if the dealer's got Ace then (according to rules) we can propose player the two following options:
-                if (dealer_->countScore(score_counter_) == 11)
+                if (dealer_->countScore(score_counter_.get()) == 11)
                 {
                     do
                     {
@@ -259,14 +258,14 @@ void BlackjackGame::dealerActions()
     }
 
     // here the dealer takes cards while his/her total score is less than 17
-    int score = dealer_->countScore(score_counter_);
+    int score = dealer_->countScore(score_counter_.get());
 
     while (score < 17)
     {
         dealer_->takeCard(decks_, DECKS_COUNT);
 
         // The exception is possible here! (it'll be caught in the function one level higher)
-        score = dealer_->countScore(score_counter_);
+        score = dealer_->countScore(score_counter_.get());
         if (score > 21)
         {
             throw BustException(dealer_->getName(), score);     // we're throwing an exception here (so watch out!)
@@ -312,13 +311,13 @@ void BlackjackGame::shuffle()
     dealer_->takeCard(decks_, DECKS_COUNT);
         
     // show the cardtable
-    showTable();                    
+    showTable();
 
     // we place the try-block here since at any time both the dealer and the dealer may be busted
     try         
     {
         // main loop, while the player doesn't specify "Stand" or the player has total score of 21
-        while (choice != '2' && player_->countScore(score_counter_) != 21)   
+        while (choice != '2' && player_->countScore(score_counter_.get()) != 21)
         {
             // Here the third option ("Double") will be available only when the player's got enough money to double down
             char third_option = '1';
@@ -348,7 +347,7 @@ void BlackjackGame::shuffle()
                 case '1':
                     // the player's given one card
                     player_->takeCard(decks_, DECKS_COUNT);
-                    int score = player_->countScore(score_counter_);
+                    int score = player_->countScore(score_counter_.get());
                     if (score > 21)
                     {
                         throw BustException(player_->getName(), score);     // we're throwing an exception here (so watch out!)

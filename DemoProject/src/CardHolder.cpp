@@ -67,7 +67,7 @@ void CardHolder::clearHand() noexcept
 /** Method delegates the task of score counting to its scoreCounter object
 * @param [in] const IScoreCounter& score_counter An object that implements particular score counting strategy
 * @returns the total score of a cardholder's hand */
-int CardHolder::countScore(const IScoreCounter& score_counter) const noexcept
+int CardHolder::countScore(const IScoreCounter* score_counter) const noexcept
 {
-    return score_counter.countScore(hand_);
+    return score_counter->countScore(hand_);
 }

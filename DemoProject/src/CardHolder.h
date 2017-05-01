@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #include "Deck.h"
 #include "BustException.h"
 #include "IScoreCounter.h"
@@ -20,7 +22,7 @@ public:
     void clearHand() noexcept;
     virtual void showHand() const noexcept;
 
-    int countScore(const IScoreCounter& score_counter) const noexcept;
+    int countScore(const IScoreCounter* score_counter) const noexcept;
 
 protected:
     /** The name of a cardholder */
