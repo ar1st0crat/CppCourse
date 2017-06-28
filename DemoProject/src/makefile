@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++14 -Wall
 
-SRCS = $(wildcard *.cpp)
+SRCS = $(wildcard Controller/*.cpp Controller/Rules/*.cpp Controller/Rules/Misc/*.cpp Controller/GameStates/*.cpp Model/*.cpp View/*.cpp)
 
 all:
-	$(CXX) $(CXXFLAGS) $(SRCS) -o ../bin/blackjack
+	$(CXX) $(CXXFLAGS) main.cpp $(SRCS) -o ../bin/blackjack
