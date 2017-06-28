@@ -8,8 +8,8 @@
 class IGameState;
 
 /**
- * @class GameController
- * @brief bla bla the GameController class
+ * @class BlackjackController
+ * @brief Blackjack game controller
  *
  * It is also the 'Context' in terms of State design pattern
  *

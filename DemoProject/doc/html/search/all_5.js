@@ -1,7 +1,6 @@
 var searchData=
 [
   ['game_5f',['game_',['../class_blackjack_controller.html#a4766a6ccceeadc28e41835dd95acd7ec',1,'BlackjackController']]],
-  ['gamecontroller',['GameController',['../class_game_controller.html',1,'']]],
   ['gameoverstate',['GameOverState',['../class_game_over_state.html',1,'']]],
   ['gameoverstate_2ecpp',['GameOverState.cpp',['../_game_over_state_8cpp.html',1,'']]],
   ['gameoverstate_2eh',['GameOverState.h',['../_game_over_state_8h.html',1,'']]],
