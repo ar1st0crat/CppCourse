@@ -1,6 +1,6 @@
 # blackjack
 
-[View documentation](https://github.com/ar1st0crat/CppCourse/blob/master/DemoProject/doc/html/index.html)
+[View documentation](https://rawgit.com/ar1st0crat/CppCourse/master/DemoProject/doc/html/index.html)
 
 A simple console application for emulating the <i>Blackjack</i> card game.
 
