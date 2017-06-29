@@ -4,7 +4,7 @@
  * @brief Default Card constructor
  * Initializes card with rank=2 and suit=Clubs (creates the card 2♣)
  */
-Card::Card() : suit_(Suit::Clubs), rank_(2)
+Card::Card() : Card(Suit::Clubs, 2)
 {
 }
 
@@ -12,7 +12,7 @@ Card::Card() : suit_(Suit::Clubs), rank_(2)
  * @brief Parameterized constructor
  * Initializes Card with given rank and suit</p>
  */
-Card::Card(Suit suit, uint8_t rank) : suit_(suit), rank_(rank)
+Card::Card(Suit suit, uint8_t rank) : suit_(suit), rank_(rank), face_up_(true)
 {
 }
 
