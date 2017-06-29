@@ -13,7 +13,7 @@ class Player
 {
 public:
     Player();
-    Player(const std::string& name, uint32_t money=0);
+    Player(const std::string& name, int32_t money=0);
 
     size_t cardCount() const;
     void addCard(Card &&card);
@@ -26,9 +26,9 @@ public:
 
     std::string getName() const;
     std::vector<Card> getHand() const;
-    uint32_t getMoney() const;
-    uint32_t getStake() const;
-    void setStake(uint32_t stake);
+    int32_t getMoney() const;
+    int32_t getStake() const;
+    void setStake(int32_t stake);
 
 protected:
     /** Player's name */
@@ -36,7 +36,7 @@ protected:
     /** Player's hand */
     std::vector<Card> hand_;
     /** Total amount of player's money */
-    uint32_t money_;
-    /** Player's current stake */
-    uint32_t stake_;
+    int32_t money_;
+    /** Player's current stake (becomes negative when player loses) */
+    int32_t stake_;
 };

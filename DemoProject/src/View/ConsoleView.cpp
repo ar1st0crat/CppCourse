@@ -67,9 +67,9 @@ char ConsoleView::inputPlayerWantsToContinue() const
  * @brief Method inputs player's stake from console
  * @return Player's stake
  */
-uint32_t ConsoleView::inputPlayerStake() const
+int32_t ConsoleView::inputPlayerStake() const
 {
-    uint32_t stake = 0;
+    int32_t stake = 0;
     std::cout << "Your stake (bet)?" << std::endl;
     std::cin >> stake;
     return stake;

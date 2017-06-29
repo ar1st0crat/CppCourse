@@ -3,7 +3,7 @@
 #include <memory>
 
 /**
- * @struct GameSummary
+ * @struct BlackjackSummary
  * @brief Contains brief info regarding game results
  */
 struct BlackjackSummary

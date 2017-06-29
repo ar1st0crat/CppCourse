@@ -28,7 +28,7 @@ public:
     virtual char inputPlayerWantsToContinue() const = 0;
 
     /** Input player's stake */
-    virtual uint32_t inputPlayerStake() const = 0;
+    virtual int32_t inputPlayerStake() const = 0;
 
     /** Input player's name */
     virtual std::string inputPlayerName() const = 0;

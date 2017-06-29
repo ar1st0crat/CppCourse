@@ -2,8 +2,8 @@
 Вводный курс по C++ со вкраплениями нетривиальных вещей
 
 План:
-* Тема 0 - Введение
-* Тема 1 - Работа с памятью
+* [Тема 0 - Введение](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec00%20-%20Intro%20to%20OOP)
+* [Тема 1 - Работа с памятью](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec01%20-%20Memory%20management)
 * Тема 2 - Классы и объекты. Инкапсуляция
 * Тема 3 - Перегрузка операторов
 * Тема 4 - Наследование
@@ -20,8 +20,9 @@
 
 Демо-проект "Консольный блекджек" с дополнительными элементами:
 - с++14 (auto, unique_ptr, shared_ptr, move, lambdas)
-- автодокументация кода для doxygen
+- автодокументация кода с doxygen
 - юнит-тесты google test
+- интеграционные тесты google mock
 - директивы препроцессора
 - файлы makefile
 

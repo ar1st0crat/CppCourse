@@ -14,7 +14,7 @@ Player::Player() : name_("unknown"), money_(0)
  * @param name the name of a player
  * @param money the amount of player's money
  */
-Player::Player(const std::string& name, uint32_t money)
+Player::Player(const std::string& name, int32_t money)
     : name_(name), money_(money)
 {
 }
@@ -91,17 +91,17 @@ std::vector<Card> Player::getHand() const
     return hand_;
 }
 
-uint32_t Player::getMoney() const
+int32_t Player::getMoney() const
 {
     return money_;
 }
 
-uint32_t Player::getStake() const
+int32_t Player::getStake() const
 {
     return stake_;
 }
 
-void Player::setStake(uint32_t stake)
+void Player::setStake(int32_t stake)
 {
     stake_ = stake;
 }

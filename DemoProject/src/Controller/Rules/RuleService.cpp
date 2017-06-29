@@ -69,7 +69,7 @@ size_t RuleService::deckCount() const
     return 2;//decks
 }
 
-uint32_t RuleService::minimalStake() const
+int32_t RuleService::minimalStake() const
 {
     return 100;//$
 }
@@ -79,7 +79,7 @@ uint32_t RuleService::minimalStake() const
  * @param money amount of player's money
  * @return true if player's got enough money, false - otherwise
  */
-bool RuleService::checkEnoughMoney(uint32_t money) const
+bool RuleService::checkEnoughMoney(int32_t money) const
 {
     return (money >= minimalStake());
 }

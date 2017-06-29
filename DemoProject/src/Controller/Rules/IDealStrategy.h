@@ -5,7 +5,7 @@
 
 /**
  * @interface IDealStrategy
- * @brief Interface declares methods for
+ * @brief Interface declares methods for organizing deals
  *
  * @author ar1st0crat
  */

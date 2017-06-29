@@ -4,7 +4,9 @@
 
 /**
  * @abstract RuleService
- * @brief An abstract class whose purpose is providing the rules of a game such as:
+ * @brief An abstract class whose purpose is providing the rules of a game
+ *
+ * Rules of the game include:
  * <ul>
  *   <li>technique for calculating the total score on a Player's hand</li>
  *   <li>check for blackjack, bust and other outcomes of the game</li>
@@ -45,8 +47,8 @@ public:
     virtual size_t deckCount() const;
 
     /** Method should return the minimally required stake from player */
-    virtual uint32_t minimalStake() const;
+    virtual int32_t minimalStake() const;
 
     /** Method should check if player's got enough money to continue  */
-    virtual bool checkEnoughMoney(uint32_t money) const;
+    virtual bool checkEnoughMoney(int32_t money) const;
 };

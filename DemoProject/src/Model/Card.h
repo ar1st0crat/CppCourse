@@ -30,6 +30,8 @@ public:
     void setNumber(size_t card_no);
     Suit getSuit() const;
     uint8_t getRank() const;
+
+    void flip(bool face_up);
     
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
     friend std::ostream& operator<<(std::ostream& os, const std::vector<Card>& hand);
@@ -39,4 +41,6 @@ protected:
     Suit suit_;
     /** Card rank */
     uint8_t rank_;
+    /** Card is face-up */
+    bool face_up_;
 };

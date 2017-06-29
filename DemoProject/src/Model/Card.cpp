@@ -46,3 +46,12 @@ Suit Card::getSuit() const
 {
     return suit_;
 }
+
+/**
+ * @brief Method flips card face up or face down
+ * @param face_up true if face up, false if face down
+ */
+void Card::flip(bool face_up)
+{
+    face_up_ = face_up;
+}
