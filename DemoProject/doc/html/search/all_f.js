@@ -1,7 +1,21 @@
 var searchData=
 [
-  ['unpacknew',['unpackNew',['../class_deck.html#ac2efb33630dd5e1679e3e9ffe165f480',1,'Deck']]],
-  ['update',['update',['../class_dealer_action_state.html#a0ac8844eadb45d247e802aebbd25356b',1,'DealerActionState::update()'],['../class_early_blackjack_state.html#af792a9398716425fb377de32ca573f2d',1,'EarlyBlackjackState::update()'],['../class_game_over_state.html#a54293054b278111a67eceef9acb38070',1,'GameOverState::update()'],['../class_i_game_state.html#ab6448d01e9bba3422f3ca13fbdae8272',1,'IGameState::update()'],['../class_initial_deal_state.html#ae2b010bdbacb7fc803cf28d639e0ff91',1,'InitialDealState::update()'],['../class_player_action_state.html#a16ae89ca6ef86c67b4e30e4c41f1f506',1,'PlayerActionState::update()']]],
-  ['updatesummary',['updateSummary',['../class_blackjack_game.html#ad9d79b1738d0a9513126f8187fac732e',1,'BlackjackGame']]],
-  ['updateview',['updateView',['../class_blackjack_controller.html#a3c1d9ae3db6463d6387aa11a204961fd',1,'BlackjackController::updateView()'],['../class_i_game_controller.html#ac3cc42c3d25b9991211c06b263ec5183',1,'IGameController::updateView()']]]
+  ['setdealer',['setDealer',['../class_blackjack_game.html#a3f552d4875f190e9a5f04f53de3fb7f6',1,'BlackjackGame::setDealer()'],['../class_i_game.html#a74053a61134682f47b8cbfe187c22dd2',1,'IGame::setDealer()']]],
+  ['setdecks',['setDecks',['../class_blackjack_game.html#a2fe10e58fc299c3a0ddf7ab48cf1809a',1,'BlackjackGame::setDecks()'],['../class_i_game.html#afe0f0472dc56df86de39bc0ad6c2d432',1,'IGame::setDecks()']]],
+  ['setnumber',['setNumber',['../class_card.html#afa387ea6d9d5ec5db790ee7d90e7ad04',1,'Card']]],
+  ['setplayer',['setPlayer',['../class_blackjack_game.html#a9047ff38574fe07d020a034241c9de80',1,'BlackjackGame::setPlayer()'],['../class_i_game.html#a2ef7bb0dfe1352270b1326c3411fa32a',1,'IGame::setPlayer()']]],
+  ['setstake',['setStake',['../class_player.html#a22c36469a3b289c599e92201f8b0e928',1,'Player']]],
+  ['setup',['setup',['../class_blackjack_controller.html#a71dc2a8d3d73e3a79d7c185fabcb223f',1,'BlackjackController::setup()'],['../class_i_game_controller.html#ae9abc812a3315151d69e77aafcd5b552',1,'IGameController::setup()']]],
+  ['shuffle',['shuffle',['../class_deck.html#a54a864e7863643d5594a90ef945b3619',1,'Deck']]],
+  ['spades',['Spades',['../_suit_8h.html#af78e1c8ea5e6837b6ab9452a1e435e4ea8dac9a2d5a20ebbf46559d684bae0f46',1,'Suit.h']]],
+  ['split',['SPLIT',['../_player_action_8h.html#aea132397c26cad8f8637a9422260decaa913bcc607ae0d97776698d9ed424be6a',1,'PlayerAction.h']]],
+  ['stake_5f',['stake_',['../class_player.html#ad650a25c799ee50553abb2d6f2967105',1,'Player']]],
+  ['stand',['STAND',['../_player_action_8h.html#aea132397c26cad8f8637a9422260decaadd135fb441de529b55c24775556f3a81',1,'PlayerAction.h']]],
+  ['start',['start',['../class_blackjack_controller.html#a371a5c5da4a0db69abf82ed59ee2b427',1,'BlackjackController::start()'],['../class_i_game_controller.html#aefb6c8918e825e3a65069e3f66d1ff95',1,'IGameController::start()']]],
+  ['suit',['Suit',['../_suit_8h.html#af78e1c8ea5e6837b6ab9452a1e435e4e',1,'Suit.h']]],
+  ['suit_2eh',['Suit.h',['../_suit_8h.html',1,'']]],
+  ['suit_5f',['suit_',['../class_card.html#ac03ac440f75e370809dc1fc087e76d24',1,'Card']]],
+  ['summary_5f',['summary_',['../class_blackjack_game.html#a0ad3cee7fa4cad8a4332abbbd1632f41',1,'BlackjackGame']]],
+  ['surrender',['SURRENDER',['../_player_action_8h.html#aea132397c26cad8f8637a9422260decaad6ca1c80a16366902e14c2082335d472',1,'PlayerAction.h']]],
+  ['switchstate',['switchState',['../class_blackjack_controller.html#ad19a6ebd1236ae6f84d0033cb3db7e2b',1,'BlackjackController']]]
 ];

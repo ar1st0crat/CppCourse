@@ -103,9 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
 <tr class="memdesc:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor Initializes "unknown" player with no money.  <a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">More...</a><br /></td></tr>
 <tr class="separator:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55d4cf5ebe00e1e802df9e8ed4231db1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a55d4cf5ebe00e1e802df9e8ed4231db1">Player</a> (const std::string &amp;name, uint32_t money=0)</td></tr>
-<tr class="memdesc:a55d4cf5ebe00e1e802df9e8ed4231db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized constructor Initializes <a class="el" href="class_player.html" title="Represents card game participants (both players and dealers) ">Player</a> with the name and amount of money given as parameters.  <a href="#a55d4cf5ebe00e1e802df9e8ed4231db1">More...</a><br /></td></tr>
-<tr class="separator:a55d4cf5ebe00e1e802df9e8ed4231db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65d34aa4dd0d6ee7b7935fc4c63d7db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad65d34aa4dd0d6ee7b7935fc4c63d7db">Player</a> (const std::string &amp;name, int32_t money=0)</td></tr>
+<tr class="memdesc:ad65d34aa4dd0d6ee7b7935fc4c63d7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized constructor Initializes <a class="el" href="class_player.html" title="Represents card game participants (both players and dealers) ">Player</a> with the name and amount of money given as parameters.  <a href="#ad65d34aa4dd0d6ee7b7935fc4c63d7db">More...</a><br /></td></tr>
+<tr class="separator:ad65d34aa4dd0d6ee7b7935fc4c63d7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf084d456e3553c61f08613f030b11da"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acf084d456e3553c61f08613f030b11da">cardCount</a> () const </td></tr>
 <tr class="memdesc:acf084d456e3553c61f08613f030b11da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method returns number of cards in <a class="el" href="class_player.html" title="Represents card game participants (both players and dealers) ">Player</a>'s hand.  <a href="#acf084d456e3553c61f08613f030b11da">More...</a><br /></td></tr>
 <tr class="separator:acf084d456e3553c61f08613f030b11da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,12 +131,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad4c6a95f1cf69c44d0c585465b101c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d852a439e2485c09ff94084651deb2c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0d852a439e2485c09ff94084651deb2c">getHand</a> () const </td></tr>
 <tr class="separator:a0d852a439e2485c09ff94084651deb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b568fbff7b1706523a9a5d56ebfa6d0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3b568fbff7b1706523a9a5d56ebfa6d0">getMoney</a> () const </td></tr>
-<tr class="separator:a3b568fbff7b1706523a9a5d56ebfa6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c8efdc2bf80ebe34efc092a152082d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae7c8efdc2bf80ebe34efc092a152082d">getStake</a> () const </td></tr>
-<tr class="separator:ae7c8efdc2bf80ebe34efc092a152082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afae3ff48ab54eb6fe79c520b60dbf466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#afae3ff48ab54eb6fe79c520b60dbf466">setStake</a> (uint32_t stake)</td></tr>
-<tr class="separator:afae3ff48ab54eb6fe79c520b60dbf466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7365637ea02a7ee5d6f96f01de56a43d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7365637ea02a7ee5d6f96f01de56a43d">getMoney</a> () const </td></tr>
+<tr class="separator:a7365637ea02a7ee5d6f96f01de56a43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3631b32d8244e5006f6bdc05883a94fa"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3631b32d8244e5006f6bdc05883a94fa">getStake</a> () const </td></tr>
+<tr class="separator:a3631b32d8244e5006f6bdc05883a94fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c36469a3b289c599e92201f8b0e928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a22c36469a3b289c599e92201f8b0e928">setStake</a> (int32_t stake)</td></tr>
+<tr class="separator:a22c36469a3b289c599e92201f8b0e928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -144,10 +144,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae48b626fa81cdf4fe831c20122287649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a383949051580e99114fc04a3005ddf47"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a383949051580e99114fc04a3005ddf47">hand_</a></td></tr>
 <tr class="separator:a383949051580e99114fc04a3005ddf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec480356570728666e20db5d9140958b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aec480356570728666e20db5d9140958b">money_</a></td></tr>
-<tr class="separator:aec480356570728666e20db5d9140958b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c0c967a87220476d1e2e30bbdd4c865"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3c0c967a87220476d1e2e30bbdd4c865">stake_</a></td></tr>
-<tr class="separator:a3c0c967a87220476d1e2e30bbdd4c865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0a60172e95d1bd85ad9760dc8f8b30"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aee0a60172e95d1bd85ad9760dc8f8b30">money_</a></td></tr>
+<tr class="separator:aee0a60172e95d1bd85ad9760dc8f8b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad650a25c799ee50553abb2d6f2967105"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad650a25c799ee50553abb2d6f2967105">stake_</a></td></tr>
+<tr class="separator:ad650a25c799ee50553abb2d6f2967105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents card game participants (both players and dealers) </p>
@@ -170,7 +170,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a55d4cf5ebe00e1e802df9e8ed4231db1"></a>
+<a class="anchor" id="ad65d34aa4dd0d6ee7b7935fc4c63d7db"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -183,7 +183,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>money</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -322,12 +322,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b568fbff7b1706523a9a5d56ebfa6d0"></a>
+<a class="anchor" id="a7365637ea02a7ee5d6f96f01de56a43d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Player::getMoney </td>
+          <td class="memname">int32_t Player::getMoney </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -352,12 +352,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7c8efdc2bf80ebe34efc092a152082d"></a>
+<a class="anchor" id="a3631b32d8244e5006f6bdc05883a94fa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Player::getStake </td>
+          <td class="memname">int32_t Player::getStake </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -384,14 +384,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afae3ff48ab54eb6fe79c520b60dbf466"></a>
+<a class="anchor" id="a22c36469a3b289c599e92201f8b0e928"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Player::setStake </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>stake</em></td><td>)</td>
           <td></td>
         </tr>
@@ -439,7 +439,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec480356570728666e20db5d9140958b"></a>
+<a class="anchor" id="aee0a60172e95d1bd85ad9760dc8f8b30"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -447,7 +447,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Player::money_</td>
+          <td class="memname">int32_t Player::money_</td>
         </tr>
       </table>
   </td>
@@ -481,7 +481,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3c0c967a87220476d1e2e30bbdd4c865"></a>
+<a class="anchor" id="ad650a25c799ee50553abb2d6f2967105"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -489,7 +489,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Player::stake_</td>
+          <td class="memname">int32_t Player::stake_</td>
         </tr>
       </table>
   </td>
@@ -498,13 +498,13 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_player.html" title="Represents card game participants (both players and dealers) ">Player</a>'s current stake </p>
+<p><a class="el" href="class_player.html" title="Represents card game participants (both players and dealers) ">Player</a>'s current stake (becomes negative when player loses) </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>CppCourse/DemoProject/src/Model/<a class="el" href="_player_8h_source.html">Player.h</a></li>
-<li>CppCourse/DemoProject/src/Model/<a class="el" href="_player_8cpp.html">Player.cpp</a></li>
+<li>/media/ar1st0crat/Programming/Projects/github/CppCourse/DemoProject/src/Model/<a class="el" href="_player_8h_source.html">Player.h</a></li>
+<li>/media/ar1st0crat/Programming/Projects/github/CppCourse/DemoProject/src/Model/<a class="el" href="_player_8cpp.html">Player.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

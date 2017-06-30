@@ -27,12 +27,12 @@ public:
     /** Input player's answer if he/she wishes to play again */
     virtual char inputPlayerWantsToContinue() const = 0;
 
-    /** Input player's stake */
-    virtual int32_t inputPlayerStake() const = 0;
-
     /** Input player's name */
     virtual std::string inputPlayerName() const = 0;
 
+    /** Input player's stake */
+    virtual int32_t inputPlayerStake() const = 0;
+
     /** Input amount of player's money */
-    virtual uint32_t inputPlayerMoney() const = 0;
+    virtual int32_t inputPlayerMoney() const = 0;
 };

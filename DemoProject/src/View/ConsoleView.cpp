@@ -91,9 +91,9 @@ std::string ConsoleView::inputPlayerName() const
  * @brief Method inputs amount of player's money from console
  * @return Player's money
  */
-uint32_t ConsoleView::inputPlayerMoney() const
+int32_t ConsoleView::inputPlayerMoney() const
 {
-    uint32_t money = 0;
+    int32_t money = 0;
     std::cout << "How much money do you have? ";
     std::cin >> money;
     return money;

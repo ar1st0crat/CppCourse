@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['getdealer',['getDealer',['../class_blackjack_game.html#a01d7378647b34675787979d7fd83f66f',1,'BlackjackGame::getDealer()'],['../class_i_game.html#a3e9ae5513f21030dbb68a55f78b7bea5',1,'IGame::getDealer()']]],
-  ['getdealstrategy',['getDealStrategy',['../class_blackjack_controller.html#a373552cb3a525e598abc6ab2c2493741',1,'BlackjackController::getDealStrategy()'],['../class_i_game_controller.html#aa38f7a9cd35d6ed8c04aab7d29b13c67',1,'IGameController::getDealStrategy()']]],
-  ['getdecks',['getDecks',['../class_blackjack_game.html#adef99f3a3f8bae70bcbbe0471e00970b',1,'BlackjackGame::getDecks()'],['../class_i_game.html#a4d0b8c1d0cf724d47783197612f49e7e',1,'IGame::getDecks()']]],
-  ['getgame',['getGame',['../class_blackjack_controller.html#a001b105daf01af24655136f45f6de564',1,'BlackjackController']]],
-  ['gethand',['getHand',['../class_player.html#a0d852a439e2485c09ff94084651deb2c',1,'Player']]],
-  ['getmoney',['getMoney',['../class_player.html#a3b568fbff7b1706523a9a5d56ebfa6d0',1,'Player']]],
-  ['getname',['getName',['../class_player.html#ad4c6a95f1cf69c44d0c585465b101c70',1,'Player']]],
-  ['getnumber',['getNumber',['../class_card.html#ae2cb9e719def0e9eb7bb48617654abff',1,'Card']]],
-  ['getplayer',['getPlayer',['../class_blackjack_game.html#af2e3a18cf79bb582411ade3b4a2d59fd',1,'BlackjackGame::getPlayer()'],['../class_i_game.html#a51e71ccf46357ad01b0510c51c138642',1,'IGame::getPlayer()']]],
-  ['getplayeraction',['getPlayerAction',['../class_blackjack_controller.html#a708526c2bb40ce9660de3315377124d4',1,'BlackjackController::getPlayerAction()'],['../class_i_game_controller.html#a802af75f90aba32784e29f7955e80949',1,'IGameController::getPlayerAction()']]],
-  ['getrank',['getRank',['../class_card.html#a28ca2a12fda5b08eeeb5713e388cef8a',1,'Card']]],
-  ['getrules',['getRules',['../class_blackjack_controller.html#a57aa9787f11295758f19a3d7b804da8e',1,'BlackjackController::getRules()'],['../class_i_game_controller.html#a9ef688e2bfbb29fdadaf3fbedd57826f',1,'IGameController::getRules()']]],
-  ['getstake',['getStake',['../class_player.html#ae7c8efdc2bf80ebe34efc092a152082d',1,'Player']]],
-  ['getsuit',['getSuit',['../class_card.html#a12ba8327404ffc12ecb1b71791690d80',1,'Card']]],
-  ['getsummary',['getSummary',['../class_blackjack_game.html#aa82a1304957f299a314b5f72358f9e97',1,'BlackjackGame']]],
-  ['givecardtodealer',['giveCardToDealer',['../class_blackjack_deal_strategy.html#a545fb6a15affe473901eb2dd5dac5da8',1,'BlackjackDealStrategy::giveCardToDealer()'],['../class_i_deal_strategy.html#a5f5cf3fcd15c6ff4c16e3b33e46062bd',1,'IDealStrategy::giveCardToDealer()']]],
-  ['givecardtoplayer',['giveCardToPlayer',['../class_blackjack_deal_strategy.html#adb93d50f58873cb7c434c8b9c9a5a997',1,'BlackjackDealStrategy::giveCardToPlayer()'],['../class_i_deal_strategy.html#a0fa883d480efb451b35865f557247deb',1,'IDealStrategy::giveCardToPlayer()']]]
+  ['flip',['flip',['../class_card.html#a1b7e020ac9d96779f15bc078c9953fee',1,'Card']]]
 ];

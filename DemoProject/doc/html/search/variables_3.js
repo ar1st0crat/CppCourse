@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hand_5f',['hand_',['../class_player.html#a383949051580e99114fc04a3005ddf47',1,'Player']]]
+  ['game_5f',['game_',['../class_blackjack_controller.html#a4766a6ccceeadc28e41835dd95acd7ec',1,'BlackjackController']]]
 ];

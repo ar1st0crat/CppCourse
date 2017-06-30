@@ -28,9 +28,9 @@ public:
     MOCK_CONST_METHOD1(outputCardTable, void(const IGame&));
     MOCK_CONST_METHOD0(inputPlayerWantsToContinue, char());
     MOCK_CONST_METHOD0(inputPlayerChoice, char());
-    MOCK_CONST_METHOD0(inputPlayerStake, uint32_t());
     MOCK_CONST_METHOD0(inputPlayerName, std::string());
-    MOCK_CONST_METHOD0(inputPlayerMoney, uint32_t());
+    MOCK_CONST_METHOD0(inputPlayerStake, int32_t());
+    MOCK_CONST_METHOD0(inputPlayerMoney, int32_t());
 
     /**
      * @brief Method sets common expectations for a view

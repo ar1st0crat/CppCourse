@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>An abstract class whose purpose is providing the rules of a game such as:  
+<p>An abstract class whose purpose is providing the rules of a game.  
  <a href="class_rule_service.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_rule_service_8h_source.html">RuleService.h</a>&gt;</code></p>
@@ -127,15 +127,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a396278f890b75742c4d270d23c5166f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4073e21eed27fa234c705507b235bcdc"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rule_service.html#a4073e21eed27fa234c705507b235bcdc">deckCount</a> () const </td></tr>
 <tr class="separator:a4073e21eed27fa234c705507b235bcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a14c2db285352c492f699bcc63fdcca"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rule_service.html#a4a14c2db285352c492f699bcc63fdcca">minimalStake</a> () const </td></tr>
-<tr class="separator:a4a14c2db285352c492f699bcc63fdcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46e30aa9a51ea49ea8c2b4a762883388"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rule_service.html#a46e30aa9a51ea49ea8c2b4a762883388">checkEnoughMoney</a> (uint32_t money) const </td></tr>
-<tr class="memdesc:a46e30aa9a51ea49ea8c2b4a762883388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method checks player's money (it should be enough for the minimal bet)  <a href="#a46e30aa9a51ea49ea8c2b4a762883388">More...</a><br /></td></tr>
-<tr class="separator:a46e30aa9a51ea49ea8c2b4a762883388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a501a5787e40cfbf9573ba186f53608"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rule_service.html#a1a501a5787e40cfbf9573ba186f53608">minimalStake</a> () const </td></tr>
+<tr class="separator:a1a501a5787e40cfbf9573ba186f53608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdcc8deabc682b9e0516435ea3e0267"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rule_service.html#a9cdcc8deabc682b9e0516435ea3e0267">checkEnoughMoney</a> (int32_t money) const </td></tr>
+<tr class="memdesc:a9cdcc8deabc682b9e0516435ea3e0267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method checks player's money (it should be enough for the minimal bet)  <a href="#a9cdcc8deabc682b9e0516435ea3e0267">More...</a><br /></td></tr>
+<tr class="separator:a9cdcc8deabc682b9e0516435ea3e0267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An abstract class whose purpose is providing the rules of a game such as: </p>
-<p><a class="el" href="class_rule_service.html" title="An abstract class whose purpose is providing the rules of a game such as: ">RuleService</a> </p><ul>
+<div class="textblock"><p>An abstract class whose purpose is providing the rules of a game. </p>
+<p><a class="el" href="class_rule_service.html" title="An abstract class whose purpose is providing the rules of a game. ">RuleService</a> Rules of the game include: </p><ul>
 <li>
 technique for calculating the total score on a <a class="el" href="class_player.html" title="Represents card game participants (both players and dealers) ">Player</a>'s hand </li>
 <li>
@@ -310,7 +310,7 @@ number of decks and minimally required player's bet </li>
 
 </div>
 </div>
-<a class="anchor" id="a46e30aa9a51ea49ea8c2b4a762883388"></a>
+<a class="anchor" id="a9cdcc8deabc682b9e0516435ea3e0267"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -320,7 +320,7 @@ number of decks and minimally required player's bet </li>
         <tr>
           <td class="memname">bool RuleService::checkEnoughMoney </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>money</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -428,7 +428,7 @@ number of decks and minimally required player's bet </li>
 
 </div>
 </div>
-<a class="anchor" id="a4a14c2db285352c492f699bcc63fdcca"></a>
+<a class="anchor" id="a1a501a5787e40cfbf9573ba186f53608"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -436,7 +436,7 @@ number of decks and minimally required player's bet </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t RuleService::minimalStake </td>
+          <td class="memname">int32_t RuleService::minimalStake </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -453,8 +453,8 @@ number of decks and minimally required player's bet </li>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>CppCourse/DemoProject/src/Controller/Rules/<a class="el" href="_rule_service_8h_source.html">RuleService.h</a></li>
-<li>CppCourse/DemoProject/src/Controller/Rules/<a class="el" href="_rule_service_8cpp.html">RuleService.cpp</a></li>
+<li>/media/ar1st0crat/Programming/Projects/github/CppCourse/DemoProject/src/Controller/Rules/<a class="el" href="_rule_service_8h_source.html">RuleService.h</a></li>
+<li>/media/ar1st0crat/Programming/Projects/github/CppCourse/DemoProject/src/Controller/Rules/<a class="el" href="_rule_service_8cpp.html">RuleService.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

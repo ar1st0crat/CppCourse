@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['stake_5f',['stake_',['../class_player.html#a3c0c967a87220476d1e2e30bbdd4c865',1,'Player']]],
-  ['suit_5f',['suit_',['../class_card.html#ac03ac440f75e370809dc1fc087e76d24',1,'Card']]],
-  ['summary_5f',['summary_',['../class_blackjack_game.html#a0ad3cee7fa4cad8a4332abbbd1632f41',1,'BlackjackGame']]]
+  ['rank_5f',['rank_',['../class_card.html#a58a14e359a03674ac270dd8afff06e27',1,'Card']]],
+  ['rules_5f',['rules_',['../class_blackjack_controller.html#a1da9a0441e9e83d0483bf90f048bdb9e',1,'BlackjackController']]]
 ];

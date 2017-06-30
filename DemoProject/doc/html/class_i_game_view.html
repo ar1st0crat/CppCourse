@@ -118,12 +118,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1f5a95c94ff8df794a8b795a31faa3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2344e75f1743231c1bd04b0914f6d12f"><td class="memItemLeft" align="right" valign="top">virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game_view.html#a2344e75f1743231c1bd04b0914f6d12f">inputPlayerWantsToContinue</a> () const =0</td></tr>
 <tr class="separator:a2344e75f1743231c1bd04b0914f6d12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cefb195c1173d3f18afa967b300736e"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game_view.html#a5cefb195c1173d3f18afa967b300736e">inputPlayerStake</a> () const =0</td></tr>
-<tr class="separator:a5cefb195c1173d3f18afa967b300736e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6c5aa7c3eab5834e226093efb2c376a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game_view.html#af6c5aa7c3eab5834e226093efb2c376a">inputPlayerName</a> () const =0</td></tr>
 <tr class="separator:af6c5aa7c3eab5834e226093efb2c376a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4103c5351a0df75764952d32955c3f41"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game_view.html#a4103c5351a0df75764952d32955c3f41">inputPlayerMoney</a> () const =0</td></tr>
-<tr class="separator:a4103c5351a0df75764952d32955c3f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae624dd59c184b9cf9f9993e90d66426a"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game_view.html#ae624dd59c184b9cf9f9993e90d66426a">inputPlayerStake</a> () const =0</td></tr>
+<tr class="separator:ae624dd59c184b9cf9f9993e90d66426a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44c3057503b4a2bc22ecb0c344cc0d8"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game_view.html#ad44c3057503b4a2bc22ecb0c344cc0d8">inputPlayerMoney</a> () const =0</td></tr>
+<tr class="separator:ad44c3057503b4a2bc22ecb0c344cc0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declares methods for card game views. </p>
@@ -180,7 +180,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4103c5351a0df75764952d32955c3f41"></a>
+<a class="anchor" id="ad44c3057503b4a2bc22ecb0c344cc0d8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint32_t IGameView::inputPlayerMoney </td>
+          <td class="memname">virtual int32_t IGameView::inputPlayerMoney </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -202,7 +202,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Input amount of player's money </p>
 
-<p>Implemented in <a class="el" href="class_console_view.html#a771dc4ae8f1d3a03731c7ed075a49a8a">ConsoleView</a>.</p>
+<p>Implemented in <a class="el" href="class_console_view.html#a7eeebaea75914ae00741299f9f48468c">ConsoleView</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5cefb195c1173d3f18afa967b300736e"></a>
+<a class="anchor" id="ae624dd59c184b9cf9f9993e90d66426a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -240,7 +240,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint32_t IGameView::inputPlayerStake </td>
+          <td class="memname">virtual int32_t IGameView::inputPlayerStake </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -254,7 +254,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Input player's stake </p>
 
-<p>Implemented in <a class="el" href="class_console_view.html#a2144b2a74293da7d04e663661130be85">ConsoleView</a>.</p>
+<p>Implemented in <a class="el" href="class_console_view.html#a76acf258d3e7442a54667db3c8c143c8">ConsoleView</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>CppCourse/DemoProject/src/View/<a class="el" href="_i_game_view_8h_source.html">IGameView.h</a></li>
+<li>/media/ar1st0crat/Programming/Projects/github/CppCourse/DemoProject/src/View/<a class="el" href="_i_game_view_8h_source.html">IGameView.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

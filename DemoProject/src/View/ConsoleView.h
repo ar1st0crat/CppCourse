@@ -15,7 +15,7 @@ public:
     void outputCardTable(const IGame& game) const override;
     char inputPlayerChoice() const override;
     char inputPlayerWantsToContinue() const override;
-    int32_t inputPlayerStake() const override;
     std::string inputPlayerName() const override;
-    uint32_t inputPlayerMoney() const override;
+    int32_t inputPlayerStake() const override;
+    int32_t inputPlayerMoney() const override;
 };

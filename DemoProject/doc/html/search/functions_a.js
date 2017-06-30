@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rungame',['runGame',['../class_blackjack_controller.html#aee3b481d696e5d3ad55080109e6c4b42',1,'BlackjackController::runGame()'],['../class_i_game_controller.html#acabe4073f183d82b8af1bbe1115c6345',1,'IGameController::runGame()']]]
+  ['player',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()'],['../class_player.html#ad65d34aa4dd0d6ee7b7935fc4c63d7db',1,'Player::Player(const std::string &amp;name, int32_t money=0)']]],
+  ['popcard',['popCard',['../class_deck.html#a34ea20d9e2a4c66a8f4b8eda7f96a175',1,'Deck']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['money_5f',['money_',['../class_player.html#aec480356570728666e20db5d9140958b',1,'Player']]]
+  ['hand_5f',['hand_',['../class_player.html#a383949051580e99114fc04a3005ddf47',1,'Player']]]
 ];
