@@ -19,8 +19,7 @@
  *
  *      Dealer should be given nothing, the game should stop right away.
  *
- *      Game should stop and update view with anything that contains
- *      word 'bust' at least once (player loses money).
+ *      Game summary should indicate that player got busted.
  *
  *      Stake: 100$   ->   player should lose 100$.
  */
@@ -70,8 +69,7 @@ TEST(OrdinaryBlackjack, testPlayerGetsBusted)
  *
  *      Dealer should be given 10♣
  *
- *      Game should stop and update view with anything that contains
- *      word 'bust' at least once (player loses money).
+ *      Game summary should indicate that player got blackjack.
  *
  *      Stake: 100$   ->   player should win 200$.
  */
@@ -119,6 +117,8 @@ TEST(OrdinaryBlackjack, testPlayerGets777)
  *
  *      Dealer should be given 10♣
  *
+ *      Game summary should indicate that player got blackjack.
+ *
  *      Stake: 100$   ->   player should win 300$.
  */
 TEST(OrdinaryBlackjack, testPlayerBlackjackAfterDoubleDown)
@@ -151,7 +151,7 @@ TEST(OrdinaryBlackjack, testPlayerBlackjackAfterDoubleDown)
 }
 
 /**
- * @brief Most usual scenario when player takes cards and then stops:
+ * @brief Ordinary scenario when player takes cards and then stops:
  *
  *      Initial deal:
  *          dealer:     Q♣
@@ -197,7 +197,7 @@ TEST(OrdinaryBlackjack, testPlayerTakesCardsAndStops)
 }
 
 /**
- * @brief Most usual scenario when player takes cards, doubles, stops and eventually loses:
+ * @brief Ordinary scenario when player takes cards, doubles, stops and eventually loses:
  *
  *      Initial deal:
  *          dealer:     Q♣
