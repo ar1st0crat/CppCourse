@@ -26,6 +26,6 @@
 
 В файле ```misc.h``` объявлены классы ```Empty```, ```Quiz```, ```GlobalScreen``` для демонстрации некоторых нюансов классов в языке С++: размер объекта пустого класса; методы класса, создаваемые компилятором С++ по умолчанию; бессмысленность вызова конструктора в теле конструктора; inline-методы класса; запрет создания объекта класса путем помещения его конструктора в секцию private.
 
-[uml](https://github.com/ar1st0crat/CppCourse/blob/master/Lectures/Lec02%20-%20Classes,%20Objects,%20Encapsulation/uml.png)
+![uml](https://github.com/ar1st0crat/CppCourse/blob/master/Lectures/Lec02%20-%20Classes,%20Objects,%20Encapsulation/uml.png)
 
-[objects](https://github.com/ar1st0crat/CppCourse/blob/master/Lectures/Lec02%20-%20Classes,%20Objects,%20Encapsulation/objects.png)
+![objects](https://github.com/ar1st0crat/CppCourse/blob/master/Lectures/Lec02%20-%20Classes,%20Objects,%20Encapsulation/objects.png)

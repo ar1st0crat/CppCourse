@@ -5,7 +5,7 @@
 * [Тема 0 - Введение](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec00%20-%20Intro)
 * [Тема 1 - Работа с памятью](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec01%20-%20Memory%20management)
 * [Тема 2 - Классы и объекты. Инкапсуляция](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec02%20-%20Classes,%20Objects,%20Encapsulation)
-* Тема 3 - Перегрузка операторов
+* [Тема 3 - Перегрузка операторов](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec03%20-%20Operator%20Overloading)
 * Тема 4 - Наследование
 * Тема 5 - Полиморфизм. Абстрактные классы и интерфейсы
 * Тема 6 - Агрегация/Композиция vs. Наследование vs. Дружественность
