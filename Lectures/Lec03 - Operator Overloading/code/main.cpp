@@ -1,31 +1,21 @@
-# Лекция 3 - Перегрузка операторов
+#include <iostream>
+#include "booking.h"
 
-План:
+int main()
+{
+    std::time_t now = std::time(0);
 
-* Общий смысл перегрузки операторов
-* Перегрузка операторов в виде методов класса и в виде глобальных функций
-* Особенности возврата из функции копии, указателя и ссылки, RVO
-* Перегрузка бинарных операторов на примере "+" и "<"
-* Перегрузка оператора индексации "[]", обсуждение l-value
-* Перегрузка префиксного и постфиксного инкремента/декремента
-* Перегрузка оператора присваивания, идиома copy-and-swap
-* Rule of Big Three
+    tm time1 = *localtime(&now);    // 8:15:20
+    time1.tm_hour = 8;
+    time1.tm_min = 15;
+    time1.tm_sec = 20;
 
-
-### Класс заказа Order
-
-В информацию о клиентском заказе у нас будет пока входить:
-
-- массив адресов заказа *(в большинстве случаев адрес отправки и назначения, но могут быть и промежуточные пункты)*
-- время отправки клиента
-- время доставки клиента
-- расстояние
-- стоимость
-
-Вместо тысячи слов продемонстрируем пример использования класса с перегруженными операторами:
+    tm time2 = *localtime(&now);    // 9:44:32
+    time2.tm_hour = 9;
+    time2.tm_min = 44;
+    time2.tm_sec = 32;
 
 
-```
     Booking booking_artema("Artema Str., 516", "Artema Str., 100", time1);
     Booking booking_circus("Circus", "Planetarium", time2);
 
@@ -78,6 +68,16 @@
         std::cout << "Booking Circus preceeds booking Artema" << std::endl;
     }
 
-```
 
-![uml](https://github.com/ar1st0crat/CppCourse/blob/master/Lectures/Lec03%20-%20Operator%20Overloading/uml.png)
+    // Еще демо копи-конструктора, оператора присваивания и инкремента
+
+    Booking tmp = booking_artema;
+    tmp.print();
+
+    tmp = booking_circus++;
+    tmp.print();
+
+    booking_circus.print();
+
+    return 0;
+}
