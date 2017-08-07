@@ -10,7 +10,6 @@ public:
     Driver();
     explicit Driver(const std::string& name);
     Driver(const std::string& name, const Vehicle& vehicle);
-    ~Driver();
 
     void setVehicle(const Vehicle& vehicle);
     void setRate(double rate);
