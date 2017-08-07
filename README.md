@@ -8,8 +8,8 @@
 * [Тема 3 - Перегрузка операторов](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec03%20-%20Operator%20Overloading)
 * [Тема 4 - Наследование](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec04%20-%20Inheritance)
 * [Тема 5 - Полиморфизм. Абстрактные классы и интерфейсы](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec05%20-%20Polymorphism,%20Interfaces)
-* [Тема 6 - Агрегация/Композиция vs. Наследование vs. Дружественность](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec06%20-%20Composition%20over%20Inheritance%20and%20Friends)
-* [Тема 7 - RTTI, dynamic_cast](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec07%20-%20Dynamic%20casts,%20RTTI)
+* [Тема 6 - RTTI, dynamic_cast](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec06%20-%20Dynamic%20casts,%20RTTI)
+* [Тема 7 - Агрегация/Композиция vs. Наследование vs. Дружественность](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec07%20-%20Composition%20over%20Inheritance%20and%20Friends)
 * [Тема 8 - Исключения](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec08%20-%20Exceptions)
 * Тема 9 - Шаблонные функции и классы. SFINAE
 * Тема 10 - Библиотека STL
