@@ -1,10 +1,11 @@
 #pragma once
 
+#include <ctime>
 #include "iprintable.h"
 #include "employee.h"
+#include "booking.h"
 
-// По сути здесь не множественное наследование,
-// а наследование одной реализации (Employee) и реализация одного интерфейса (IPrintable)
+class TaxiService;
 
 class Operator : public Employee, public IPrintable
 {
@@ -15,6 +16,9 @@ public:
 
     void setId(unsigned int id);
     unsigned int getId() const;
+
+    Booking* processBooking(std::tm call_time);
+
 
     // переопределение методов Employee
 public:
