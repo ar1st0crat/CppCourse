@@ -8,7 +8,6 @@
 void show_object_address(IPrintable& printable);
 
 
-
 int main()
 {
     // ======================== PART 1 =========================
@@ -108,6 +107,31 @@ int main()
     // Employee& employee = driver;
     // std::cout << employee.salary_bonus(1000) << std::endl;
 
+
+
+    // а теперь убедимся, что таблицы виртуальных функций таки существуют:
+
+    class A
+    {
+    public:
+        void foo();
+    };
+
+    class ASubclass : public A {};
+
+    class VirtualA
+    {
+    public:
+        virtual void foo() {}
+    };
+
+    // любой подкласс также получает доп. указатель
+    class VirtualASubclass : public VirtualA {};
+
+    std::cout << "sizeof(A) = " << sizeof(A) << std::endl;
+    std::cout << "sizeof(ASubclass) = " << sizeof(ASubclass) << std::endl;
+    std::cout << "sizeof(VirtualA) = " << sizeof(VirtualA) << std::endl;
+    std::cout << "sizeof(VirtualASubclass) = " << sizeof(VirtualASubclass) << std::endl;
 
 
 
