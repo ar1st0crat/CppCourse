@@ -6,7 +6,6 @@
 class Booking
 {
 public:
-
     Booking(const std::string& address_from, const std::string& address_to, tm time);
     Booking(const std::string addresses[], std::size_t count, tm time);
     Booking(const Booking& b);

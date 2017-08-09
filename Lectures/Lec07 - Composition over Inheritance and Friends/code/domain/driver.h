@@ -5,7 +5,7 @@
 #include "vehicle.h"
 #include "booking.h"
 
-class Driver : public Employee, public IPrintable
+class Driver : public Employee
 {
 public:
     Driver();
@@ -22,8 +22,8 @@ public:
 
     // переопределение методов Employee
 public:
-    double salary_bonus(double salary) const override;
-    std::string benefit() const;
+    double salaryBonus(double salary) const override;
+    std::string benefits() const override;
 
     // реализация интерфейса IPrintable
 public:

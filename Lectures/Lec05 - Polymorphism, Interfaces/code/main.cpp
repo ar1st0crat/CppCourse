@@ -5,7 +5,7 @@
 
 
 // тело будет ниже, после функции main()
-void show_object_address(IPrintable& printable);
+void showObjectAddress(IPrintable& printable);
 
 
 int main()
@@ -20,8 +20,8 @@ int main()
     // здесь уже на этапе компиляции понятно,
     // метод какого класса будет вызываться:
 
-    std::cout << "Employee's bonus: " << emp.salary_bonus(1000) << std::endl;
-    std::cout << "Operator's bonus: " << ivanova.salary_bonus(1000) << std::endl;
+    std::cout << "Employee's bonus: " << emp.salaryBonus(1000) << std::endl;
+    std::cout << "Operator's bonus: " << ivanova.salaryBonus(1000) << std::endl;
 
 
     // а теперь морально готовимся к полиморфизму:
@@ -51,16 +51,16 @@ int main()
     // (здесь результат такой же, как и выше, но по совершенно другой причине!
     //  здесь только во время ВЫПОЛНЕНИЯ программы бло решено, какой метод вызвать)
 
-    std::cout << "Employee's bonus: " << employee->salary_bonus(1000) << std::endl;
-    std::cout << "Operator's bonus: " <<  petrova->salary_bonus(1000) << std::endl;
+    std::cout << "Employee's bonus: " << employee->salaryBonus(1000) << std::endl;
+    std::cout << "Operator's bonus: " <<  petrova->salaryBonus(1000) << std::endl;
 
 
     // Однакож, если метод не будет помечен как virtual, то полиморфизма не будет!
     // и будет вызываться метод класса Employee в обоих случаях.
     // Специально для демо мы сделали benefit() не виртуальным, а обычным
 
-    std::cout << "Employee's benefit: " << employee->benefit() << std::endl;
-    std::cout << "Operator's benefit: " <<  petrova->benefit() << std::endl;
+    std::cout << "Employee's benefits: " << employee->benefits() << std::endl;
+    std::cout << "Operator's benefits: " <<  petrova->benefits() << std::endl;
 
     // Если что, в Java слово virtual не нужно,
     // потому что ВСЕ методы класса там являются виртуальными по умолчанию
@@ -93,7 +93,7 @@ int main()
 
     for (std::size_t i = 0; i < 4; ++i)
     {
-        std::cout << "Bonus " << i+1 << ": " << employees[i]->salary_bonus(1000) << std::endl;
+        std::cout << "Bonus " << i+1 << ": " << employees[i]->salaryBonus(1000) << std::endl;
     }
 
     // привент зе мемори лик
@@ -105,7 +105,7 @@ int main()
     // Полиморфизм будет происходить и с ссылками (&) :
     // Driver driver;
     // Employee& employee = driver;
-    // std::cout << employee.salary_bonus(1000) << std::endl;
+    // std::cout << employee.salaryBonus(1000) << std::endl;
 
 
 
@@ -189,9 +189,9 @@ int main()
 
     Vehicle car("Ford", "Focus", "x915ae", Color::WHITE, 2012);
 
-    show_object_address(ivanova);
-    show_object_address(*vasya);
-    show_object_address(car);
+    showObjectAddress(ivanova);
+    showObjectAddress(*vasya);
+    showObjectAddress(car);
 
 
     // а эти не скомпилируются, потому что мы не обозначили, что
@@ -239,7 +239,7 @@ int main()
 
 // вот эта функция, которая принимает любой принтэбл объект
 
-void show_object_address(IPrintable& printable)
+void showObjectAddress(IPrintable& printable)
 {
     std::cout << " === The object === " << std::endl;
     printable.print();

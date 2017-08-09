@@ -48,12 +48,12 @@ bool Driver::hasTruck() const
     return dynamic_cast<const Truck*>(vehicle_) != nullptr;
 }
 
-double Driver::salary_bonus(double salary) const
+double Driver::salaryBonus(double salary) const
 {
     return salary * 0.2;
 }
 
-std::string Driver::benefit() const
+std::string Driver::benefits() const
 {
     return "swimming pool, gym, +10 days of paid vacation";
 }
@@ -65,11 +65,11 @@ void Driver::handleBooking(Booking& booking)
 {
     // можно обращаться к закрытым полям Booking, т.к. водитель - friend
     // (но вообще мы это потом уберем)
-    std::tm time = booking.time_from_;
-    std::time_t t = std::mktime(&time);
-    t += 600;
+    std::tm departure = booking.time_from_;
+    std::time_t arrival = std::mktime(&departure);
+    arrival += 600;
 
-    booking.time_to_ = *localtime(&t);
+    booking.time_to_ = *localtime(&arrival);
 }
 
 

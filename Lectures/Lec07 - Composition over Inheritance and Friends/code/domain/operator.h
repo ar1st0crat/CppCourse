@@ -7,7 +7,7 @@
 
 class TaxiService;
 
-class Operator : public Employee, public IPrintable
+class Operator : public Employee
 {
 public:
     Operator();
@@ -19,11 +19,10 @@ public:
 
     Booking* processBooking(std::tm call_time);
 
-
     // переопределение методов Employee
 public:
-    double salary_bonus(double salary) const override;
-    std::string benefit() const;
+    double salaryBonus(double salary) const override;
+    std::string benefits() const override;
 
     // реализация интерфейса IPrintable
 public:

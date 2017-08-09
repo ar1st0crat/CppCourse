@@ -42,12 +42,12 @@ double Driver::getRate() const
     return rate_;
 }
 
-double Driver::salary_bonus(double salary) const
+double Driver::salaryBonus(double salary) const
 {
     return salary * 0.2;
 }
 
-std::string Driver::benefit() const
+std::string Driver::benefits() const
 {
     return "swimming pool, gym, +10 days of paid vacation";
 }

@@ -32,18 +32,22 @@ unsigned int Operator::getId() const
     return id_;
 }
 
-double Operator::salary_bonus(double salary) const
+double Operator::salaryBonus(double salary) const
 {
     return salary * 0.1;
 }
 
-std::string Operator::benefit() const
+std::string Operator::benefits() const
 {
     return "free lunch, swimming pool";
 }
 
+// новая функция оператора - обрабокта и подготовка заказа:
+
 Booking* Operator::processBooking(std::tm call_time)
 {
+    // оператор спрашивает адрес отправки и доставки:
+
     std::string address_from, address_to;
 
     std::cout << "Your address?" << std::endl;
@@ -51,5 +55,19 @@ Booking* Operator::processBooking(std::tm call_time)
     std::cout << "Where are you heading?" << std::endl;
     std::getline(std::cin, address_to);
 
-    return new Booking(address_from, address_to, call_time);
+    // формирует заказ
+
+    Booking* booking = new Booking(address_from, address_to, call_time);
+
+    // дополняет заказ информацией о типе машины, которая нужна
+
+    std::cout << "Do you need a car (c) or a truck (t)?" << std::endl;
+    char choice = 'c';
+    std::cin >> choice;
+    std::cin.ignore(256, '\n');
+    booking->is_truck_ = (choice == 't') ? true : false;
+
+    // еще оператор может сформировать признак VIP-шности заказа, но это потом ))
+
+    return booking;
 }

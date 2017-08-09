@@ -18,10 +18,10 @@ public:
 
     // переопределение методов Employee
 public:
-    double salary_bonus(double salary) const override;
-    std::string benefit() const;
+    double salaryBonus(double salary) const override;
+    std::string benefits() const;
 
-    // реализация интерфейса IPrintable
+    // переопределение методов Employee
 public:
     void print() const override;
 

@@ -2,8 +2,9 @@
 
 #include <string>
 #include <ctime>
+#include "iprintable.h"
 
-class Employee
+class Employee : public IPrintable
 {
 public:
     Employee();
@@ -20,9 +21,11 @@ public:
     unsigned long experienceDays();
 
 public:
-    virtual double salary_bonus(double salary) const;   // надбавки к зарплате
-    /*virtual*/ std::string benefit() const;            // дополнительные плюшки для сотрудника
-                                                        // (специально для примера убрали виртуальность)
+    virtual double salaryBonus(double salary) const;   // надбавки к зарплате
+    virtual std::string benefits() const;              // дополнительные плюшки для сотрудника
+
+public:
+    void print() const override;
 
 protected:
     std::string name_;

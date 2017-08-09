@@ -32,12 +32,12 @@ unsigned int Operator::getId() const
     return id_;
 }
 
-double Operator::salary_bonus(double salary) const
+double Operator::salaryBonus(double salary) const
 {
     return salary * 0.1;
 }
 
-std::string Operator::benefit() const
+std::string Operator::benefits() const
 {
     return "free lunch, swimming pool";
 }

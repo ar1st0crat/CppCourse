@@ -46,12 +46,12 @@ unsigned long Employee::experienceDays()
     return std::difftime(now, std::mktime(&reg_date_)) / (60 * 60 * 24);
 }
 
-double Employee::salary_bonus(double salary) const
+double Employee::salaryBonus(double salary) const
 {
     return 0.0;
 }
 
-std::string Employee::benefit() const
+std::string Employee::benefits() const
 {
     return "none";
 }

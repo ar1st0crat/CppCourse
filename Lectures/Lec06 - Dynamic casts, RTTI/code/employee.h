@@ -20,8 +20,8 @@ public:
     unsigned long experienceDays();
 
 public:
-    virtual double salary_bonus(double salary) const;   // надбавки к зарплате
-    /*virtual*/ std::string benefit() const;            // дополнительные плюшки для сотрудника
+    virtual double salaryBonus(double salary) const;    // надбавки к зарплате
+    /*virtual*/ std::string benefits() const;            // дополнительные плюшки для сотрудника
                                                         // (специально для примера убрали виртуальность)
 
 protected:
