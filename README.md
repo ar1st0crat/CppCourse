@@ -11,12 +11,12 @@
 * [Тема 6 - RTTI, dynamic_cast](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec06%20-%20Dynamic%20casts,%20RTTI)
 * [Тема 7 - Агрегация/Композиция vs. Наследование vs. Дружественность](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec07%20-%20Composition%20over%20Inheritance%20and%20Friends)
 * [Тема 8 - Исключения](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec08%20-%20Exceptions)
-* Тема 9 - Шаблонные функции и классы. SFINAE
-* Тема 10 - Библиотека STL
-* Тема 11 - RAII. Умные указатели
+* [Тема 9 - Шаблонные функции и классы. SFINAE](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec09%20-%20Templates)
+* [Тема 10 - Библиотека STL](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec10%20-%20STL)
+* [Тема 11 - RAII. Умные указатели](https://github.com/ar1st0crat/CppCourse/tree/master/Lectures/Lec11%20-%20RAII,%20Smart%20Pointers)
 * Тема 12 - Современные стандарты С++
 * Тема 13 - Qt
-* Тема 14 - MFC
+* Тема 14 - Win32 API, MFC
 
 
 Темы и вопросы курса поясняются на примерах классов и интерфейсов проекта **TaxiService**. В лекциях потихоньку будет писаться эта система (впрочем, будет обозначен только каркас).
