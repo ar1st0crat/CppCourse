@@ -1,6 +1,6 @@
 #include <iostream>
 #include "booking.h"
-
+#include "wrongaddressexception.h"
 
 Booking::Booking() : Booking("unknown", "unknown", tm())
 {
@@ -122,10 +122,12 @@ bool Booking::isVip() const
 
 // ===================== ПЕРЕГРУЗКА ОПЕРАТОРОВ ======================
 
-// по-хорошему здесь надо проверить выход index за "пределы разумного"
-// (но пока не делаем эту проверку)
 std::string& Booking::operator[](std::size_t index) const
 {
+    if (index < 0 || index >= address_count_)
+    {
+        throw std::out_of_range("Invalid address index!");
+    }
     return addresses_[index];
 }
 
@@ -148,6 +150,12 @@ Booking Booking::operator++(int)
 
 Booking& Booking::operator+=(const std::string& address)
 {
+    if (address == "")
+    {
+        throw WrongAddressException("Address can not be empty!",
+                                    "From Booking::operator+=");
+    }
+
     std::string* addresses = new std::string [address_count_ + 1];
 
     for (std::size_t i = 0; i < address_count_; ++i)

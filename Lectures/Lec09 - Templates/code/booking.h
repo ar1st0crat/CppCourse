@@ -21,7 +21,7 @@ public:
 public:
     std::string* getAddresses() const;
     std::size_t getAddressCount() const;
-    tm getTime() const;
+    std::tm getTime() const;
     bool isTruck() const;
     bool isVip() const;
 
@@ -31,17 +31,13 @@ public:
     friend std::ostream& operator<<(std::ostream& o, const Booking& b);
     friend void swap(Booking& b1, Booking& b2);
 
-    // объявлены два класса друзьями (только для примера!)
-    friend class Operator;
-    friend class Driver;
-
 private:
     std::string* addresses_;        // динамический массив адресов в заказе
     std::size_t address_count_;
     double distance_;
     double price_;
-    tm time_from_;
-    tm time_to_;
+    std::tm time_from_;
+    std::tm time_to_;
     bool is_truck_;
     bool is_vip_;
 };

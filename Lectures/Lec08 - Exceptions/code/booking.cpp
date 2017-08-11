@@ -220,7 +220,7 @@ Booking operator+(const Booking& b1, const Booking& b2)
     // и создаем комбинированный заказ:
     Booking b(addresses, total_count, b1.time_from_);
 
-    delete addresses;
+    delete []addresses;
 
     return b;
 }

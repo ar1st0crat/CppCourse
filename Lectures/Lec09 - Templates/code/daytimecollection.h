@@ -41,7 +41,7 @@ void DaytimeCollection<T>::add(T element)
     {
         night_entries_[night_count_++] = element;
     }
-    else if (time.tm_hour >= 12.00)
+    else if (time.tm_hour >= 12)
     {
         day_entries_[day_count_++] = element;
     }
