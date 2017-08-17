@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <unordered_map>
 #include <set>
 #include <iterator>
 #include <functional>
@@ -117,11 +118,53 @@ void associative_containers_demo()
     team.insert(std::make_pair("Thierry", 11));
     team.insert(std::make_pair("Zinedine", 5));
     team.insert(std::make_pair("Lionel", 10));
-    team.insert(std::make_pair("Christiano", 7));
+    team.insert(std::make_pair("Cristiano", 7));
 
-    for (auto& player : team)
+    for (const auto& player : team)
     {
         std::cout << player.first << " #" << player.second << std::endl;
+    }
+
+
+    // под капотом map лежит красно-черное дерево;
+    // многие привыкли, что словари реализуются на основе хеш-таблиц...
+
+    // Начиная с С++11, доступен именно основанный на хеш-таблицах мэп
+    //                        unordered_map
+    // (ну раз уж С++11, то и проинициализируем в стиле С++11)
+
+    std::unordered_map<std::string, std::string> phonebook
+    {
+        { "Petrov", "000-111-22-33" },
+        { "Ivanov", "000-222-22-33" },
+        { "Sidorov", "000-333-22-33" }
+    };
+
+    for (const auto& entry : phonebook)
+    {
+        std::cout << entry.first << ", Tel: " << entry.second << std::endl;
+    }
+
+    // можем посмотреть, что именно он там нахешировал:
+
+    auto hash_func = phonebook.hash_function();
+
+    std::cout << std::endl << "Hashes:" << std::endl;
+    std::cout << "Petrov: " << hash_func("Petrov") << std::endl;
+    std::cout << "Ivanov: " <<  hash_func("Ivanov") << std::endl;
+    std::cout << "Sidorov: " <<  hash_func("Sidorov") << std::endl;
+
+
+    std::unordered_map<Person, int> salaries
+    {
+        { Person("Bob", 24), 5000 },
+        { Person("Alice", 28), 8000 },
+        { Person("Stevie", 20), 3000 }
+    };
+
+    for (const auto& record : salaries)
+    {
+        std::cout << record.first << ", Salary: " << record.second << std::endl;
     }
 
 

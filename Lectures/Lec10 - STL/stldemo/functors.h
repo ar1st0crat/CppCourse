@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <functional>
 
 
@@ -72,3 +73,75 @@ void print(int x)
 {
     std::cout << x << " ";
 }
+
+// Person засветится как в демонстрации векторов,
+// так и в демонстрации ассоциативных контейнеров
+
+class Person
+{
+public:
+    Person(std::string name, int age) : name_(name), age_(age)
+    {
+    }
+
+    // это нужно, чтобы Person мог быть использован
+    // в качестве ключа в unordered_map
+
+    friend bool operator==(const Person& lhs, const Person& rhs);
+    friend struct std::hash<Person>;
+
+    // и оператор "меньше", если в обычном мэпе:
+    friend bool operator<(const Person& lhs, const Person& rhs);
+
+    friend std::ostream& operator<<(std::ostream& os, const Person& p);
+
+protected:
+    std::string name_;
+    int age_;
+};
+
+
+bool operator==(const Person& lhs, const Person& rhs)
+{
+    return lhs.name_ == rhs.name_ && lhs.age_ == rhs.age_;
+}
+
+bool operator<(const Person& lhs, const Person& rhs)
+{
+    return lhs.name_ < rhs.name_;
+}
+
+std::ostream& operator<<(std::ostream& os, const Person& p)
+{
+    os << p.name_ << " (" << p.age_ << " years old)";
+    return os;
+}
+
+// custom specialization of std::hash can be injected in namespace std
+namespace std
+{
+    template<>
+    struct hash<Person>
+    {
+        typedef Person argument_type;
+        typedef std::size_t result_type;
+
+        result_type operator()(argument_type const& s) const
+        {
+            result_type const h1 ( std::hash<std::string>{}(s.name_) );
+            result_type const h2 ( std::hash<int>{}(s.age_) );
+            return h1 ^ (h2 << 1);
+        }
+    };
+}
+
+// custom hash can be a standalone function object:
+//struct MyHash
+//{
+//    std::size_t operator()(Person const& p) const
+//    {
+//        std::size_t h1 = std::hash<std::string>{}(p.name_);
+//        std::size_t h2 = std::hash<int>{}(p.age_);
+//        return h1 ^ (h2 << 1);
+//    }
+//};

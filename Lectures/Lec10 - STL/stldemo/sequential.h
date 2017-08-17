@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 #include <deque>
@@ -10,17 +11,6 @@
 #include <algorithm>
 #include <functional>
 #include "functors.h"
-
-class Person
-{
-public:
-    Person(std::string name, int age) : name_(name), age_(age)
-    {
-    }
-protected:
-    std::string name_;
-    int age_;
-};
 
 
 void sequential_containers_demo()
@@ -59,14 +49,21 @@ void sequential_containers_demo()
     {
         std::cout << v[i] << " ";
     }
+    std::cout << "Reserve 100 elements!" << std::endl;
+
+    v.reserve(100);
+    std::cout << "Size: " << v.size() << std::endl;
+    std::cout << "Capacity: " << v.capacity() << std::endl;
+
     std::cout << std::endl;
+
 
     // адаптеры контейнеров: stack, queue, priority_queue
 
     std::cout << "stack demo: " << std::endl;
 
     std::stack<double, std::vector<double>> s;
-    s.push(2);
+    s.push(12);
     s.push(4);
     s.push(5);
 
@@ -80,7 +77,7 @@ void sequential_containers_demo()
     std::cout << "queue demo: " << std::endl;
 
     std::queue<double> q;
-    q.push(2);
+    q.push(12);
     q.push(4);
     q.push(5);
 
@@ -88,6 +85,20 @@ void sequential_containers_demo()
     q.pop();
     std::cout << q.front() << " " << q.back() << std::endl;
     q.pop();
+
+    std::cout << std::endl;
+
+    std::cout << "priroity queue demo: " << std::endl;
+
+    std::priority_queue<double> pq;
+    pq.push(12);
+    pq.push(4);
+    pq.push(5);
+
+    std::cout << pq.top() << std::endl;
+    pq.pop();
+    std::cout << pq.top() << std::endl;
+    pq.pop();
 
     std::cout << std::endl << std::endl;
 
@@ -148,66 +159,25 @@ void sequential_containers_demo()
 
 
 
-    /* std functors:
-     *  less, greater, equal_to
-     *  minus, plus, divides, modulus, multiplies
-     *  logical_not, logical_and, logical_or
-     *  bind1st, bind2nd, not1, not2
-     *  mem_fun, fun_ptr
-     */
-
-
-    std::bind2nd(std::less<int>(), 10);
-    std::bind1st(std::modulus<size_t>(), 512);
-    std::not1(std::logical_not<bool>());
-
-    std::size_t cnt = std::count_if(
-                v.begin(), v.end(), std::bind2nd(std::less<int>(), 3));  // x < 3
-
-    std::cout << std::endl << cnt << std::endl;
-
-    std::vector<std::string> ws;
-    std::for_each(ws.begin(), ws.end(), std::mem_fun_ref(&std::string::clear));
-
-    std::vector<int> tv(v.size());
-    std::vector<int> cv(v.size());
-    std::transform(v.begin(), v.end(), tv.begin(), std::bind2nd(std::multiplies<int>(), 2));
-    std::copy(tv.begin(), tv.end(), cv.begin());
-
-
-
-
     std::copy(v.begin(), v.end(), std::ostream_iterator<int32_t>(std::cout, " "));
 
     std::vector<double> vcopy;
     std::copy(v.begin(), v.end(), std::back_inserter(vcopy));
 
-    std::copy(vcopy.begin(), vcopy.end(), std::ostream_iterator<double>(std::cout, " "));
+    std::ofstream file("out.txt");
 
-//    std::ifstream file("input.txt");
-//    std::vector<int> fvec((std::istream_iterator<int>(file)),
-//                          std::istream_iterator<int>());
+    std::copy(vcopy.begin(), vcopy.end(), std::ostream_iterator<double>(file, " "));
 
-//    std::for_each(begin(fvec), end(fvec), [](int x) {
-//        std::cout << x << std::endl;
-//    });
+    file.close();
 
 
+    std::cout << std::endl;
 
-    // IDIOMS:
+    std::ifstream input("out.txt");
+    std::vector<int> fv((std::istream_iterator<int>(input)),
+                         std::istream_iterator<int>());
 
-    // 1) remove element by value
-    tv.erase(std::remove(tv.begin(), tv.end(), 2), tv.end());
-    std::copy(tv.begin(), tv.end(), std::ostream_iterator<double>(std::cout, " "));
-
-    // 2) remove unique elements
-    std::sort(cv.begin(), cv.end());
-    cv.erase(std::unique(cv.begin(), cv.end()), cv.end());
-    std::copy(cv.begin(), cv.end(), std::ostream_iterator<double>(std::cout, " "));
-
-    // more:
-    // std::next_permutation, std::prev_permutation
-    // nth-element, merge, partition
+    std::copy(fv.begin(), fv.end(), std::ostream_iterator<double>(std::cout, " "));
 
 
     std::cout << std::endl;
@@ -231,20 +201,60 @@ void sequential_containers_demo()
     // Можно свой функтор и не писать, если есть его стандартный аналог:
     std::cout << std::count_if(arr, arr + 10, std::bind2nd(std::less<int>(), 0)) << " negatives" << std::endl;
 
-    /*
-     *  Еще примеры:
-     *
-     *  std::bind2nd(std::less<int>(), 10);
-        std::bind1st(std::modulus<std::size_t>(), 512);
-        std::not1(std::logical_not<bool>());
+    /* std functors:
+     *  less, greater, equal_to
+     *  minus, plus, divides, modulus, multiplies
+     *  logical_not, logical_and, logical_or
+     *  bind1st, bind2nd, not1, not2
+     *  mem_fun, fun_ptr
      */
 
+    std::size_t cnt = std::count_if(
+                v.begin(), v.end(), std::bind2nd(std::less<int>(), 3));  // x < 3
+
+    std::cout << std::endl << cnt << std::endl;
+
+    std::vector<std::string> ws;
+    std::for_each(ws.begin(), ws.end(), std::mem_fun_ref(&std::string::clear));
+
+    std::vector<int> tv(v.size());
+    std::vector<int> cv(v.size());
+    std::transform(v.begin(), v.end(), tv.begin(), std::bind2nd(std::multiplies<int>(), 2));
+    std::copy(tv.begin(), tv.end(), cv.begin());
+
+
+
+    // Прежде чем писать свои циклы, пройтись по мануалу STL -
+    // а вдруг там это уже есть.
+
+    // Например, там есть даже генерация натуральных чисел от х до у:
 
     std::vector<int> numbazz(10);
     std::iota(begin(numbazz), end(numbazz), 1);
     std::for_each(numbazz.begin(), numbazz.end(), print);
 
+    // iterator.begin()   -    old C++
+    // begin(iterator)    -    C++11
+
     std::cout << std::endl;
+
+
+
+    // IDIOMS:
+
+    // 1) remove element by value
+    tv.erase(std::remove(tv.begin(), tv.end(), 2), tv.end());
+    std::copy(tv.begin(), tv.end(), std::ostream_iterator<double>(std::cout, " "));
+
+    // 2) remove unique elements
+    std::sort(cv.begin(), cv.end());
+    cv.erase(std::unique(cv.begin(), cv.end()), cv.end());
+    std::copy(cv.begin(), cv.end(), std::ostream_iterator<double>(std::cout, " "));
+
+    // more:
+    // std::next_permutation, std::prev_permutation
+    // nth-element, merge, partition
+
 
 
     // ============================================== vector<bool> and bitset demo
