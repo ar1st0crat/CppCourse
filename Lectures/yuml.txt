@@ -1,0 +1,18 @@
+lec02
+
+[Driver|name_: string;rate_: double;car_: const Car*|void print() const]<>-1>[Car|make_: string;model_: string;no_: string;year_: short;color_: mutable Color;|void repaint(Color color) const;void print() const]
+
+
+lec04
+
+[Driver]<>-1>[Vehicle], [Driver]--^[Employee|name_: string; phone_: string; reg_date_: tm; is_on_trial_: bool|unsigned long experienceDays();void print() const], [Operator]--^[Employee], [Car]--^[Vehicle|make_: string;model_: string;no_: string;year_: short;color_: mutable Color;|void repaint(Color color) const;void print() const], [Truck]--^[Vehicle]
+
+
+lec05
+
+[Driver]<>-1>[Vehicle], [Driver]--^[Employee|name_: string; phone_: string; reg_date_: tm; is_on_trial_: bool|unsigned long experienceDays();double salary_bonus(double);string benefit()], [Operator]--^[Employee], [Vehicle|make_: string;model_: string;no_: string;year_: short;color_: mutable Color;|void repaint(Color color) const],[<<IPrintable>>;print()]^-.-[Driver],[<<IPrintable>>;print()]^-.-[Operator],[<<IPrintable>>;print()]^-.-[Vehicle],[GeoService|center_coordinates_: Position|double calculateDistance();Position addressToPosition();string positionToAddress();string* makeRoute();double estimateTime()]^--[TaxiGeoService]
+
+
+lec07
+
+[Driver]<>-1[Vehicle], [Driver|handleBooking()]--^[Employee], [Operator|processBooking()]--^[Employee], [GeoService|string* makeRoute();double calculateDistance();double estimateTime()]^--[TaxiGeoService],[Vehicle]^--[Car],[Vehicle]^--[Truck],[TaxiService|processCall();findDriver()]<>--1[GeoService],[TaxiService]++--1..100[Driver],[TaxiService]++--1..20[Operator],[TaxiService]++--1..100[Vehicle],[TaxiService]++--1..10000[Booking],[<<ISerializable>>;serialize();deserialize()]^-.-[TaxiService]
