@@ -25,7 +25,7 @@
 Вместо тысячи слов продемонстрируем пример использования класса с перегруженными операторами:
 
 
-```
+```C++
     Booking booking_artema("Artema Str., 516", "Artema Str., 100", time1);
     Booking booking_circus("Circus", "Planetarium", time2);
 
